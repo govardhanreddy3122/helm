@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: quantiphiviramms/frontend:v2
+          image: gcr.io/absolute-realm-353309/myapp:v1.0
           ports:
             - containerPort: 80
           volumeMounts:
