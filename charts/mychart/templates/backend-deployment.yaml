@@ -21,4 +21,4 @@ spec:
         - name: backend-container
           image: gcr.io/absolute-realm-353309/myapp:v2.0
           ports:
-            - containerPort: 5000
+            - containerPort: 8000
