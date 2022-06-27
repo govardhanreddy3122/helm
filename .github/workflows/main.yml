@@ -33,4 +33,3 @@ jobs:
       - name: helm mychart
         run: |
           helm upgrade mychart ./charts/mychart
-
