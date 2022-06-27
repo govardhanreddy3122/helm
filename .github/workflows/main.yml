@@ -1,0 +1,35 @@
+name: build and deploy
+
+on: 
+  push:
+    branches: 
+    - 'main'
+
+jobs:
+  kubernetes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup gcloud
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          service_account_email: ${{ secrets.GHUB_ACTION_CI_GCP_EMAIL }}
+          service_account_key: ${{ secrets.GHUB_ACTION_CI_GCP_KEY }}
+
+      - name: setup Helm3
+        run: |
+          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+          chmod 700 get_helm.sh
+          ./get_helm.sh
+          helm plugin install https://github.com/databus23/helm-diff
+
+      - name: authenticating into cluster
+        run: |
+          gcloud config set project absolute-realm-353309
+          gcloud container clusters get-credentials mygke1 --region=asia-east1-a
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: helm mychart
+        run: |
+          helm upgrade mychart ./charts/mychart
