@@ -22,3 +22,4 @@ spec:
           image: gcr.io/absolute-realm-353309/myapp:v2.0
           ports:
             - containerPort: 8000
+
