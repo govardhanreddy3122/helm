@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setup gcloud
-        uses: google-github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@v0
         with:
           service_account_email: ${{ secrets.GHUB_ACTION_CI_GCP_EMAIL }}
           service_account_key: ${{ secrets.GHUB_ACTION_CI_GCP_KEY }}
