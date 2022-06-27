@@ -25,7 +25,7 @@ jobs:
       - name: authenticating into cluster
         run: |
           gcloud config set project absolute-realm-353309
-          gcloud container clusters get-credentials mygke1 --region=asia-east1-a
+          gcloud container clusters get-credentials mygke1 --zone asia-east1-a --project absolute-realm-353309
 
       - name: Checkout
         uses: actions/checkout@v2
