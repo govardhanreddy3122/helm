@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: backenddeployment1
   labels:
-    app: backend-deployment
+    app: backenddeployment1
 spec:
   replicas: 1
   selector:
@@ -21,4 +21,4 @@ spec:
         - name: backend-container
           image: gcr.io/absolute-realm-353309/myapp:v2.0
           ports:
-            - containerPort: 8000
+            - containerPort: 5000
