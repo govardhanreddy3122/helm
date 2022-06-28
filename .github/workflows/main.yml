@@ -32,4 +32,4 @@ jobs:
 
       - name: helm my-app
         run: |
-          helm upgrade my-app ./charts/mychart
+          helm install my-app ./charts/mychart
