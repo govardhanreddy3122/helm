@@ -2,9 +2,9 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: frontend-service
+  name: frontendservice1
   labels:
-    app: frontend-service
+    app: frontendservice1
     
 spec:
   type: NodePort
