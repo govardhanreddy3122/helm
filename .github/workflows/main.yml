@@ -30,6 +30,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: helm mychart
+      - name: helm my-app
         run: |
-          helm upgrade mychart ./charts/mychart
+          helm upgrade my-app ./charts/mychart
