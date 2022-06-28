@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-service
+  name: backendservice1
   labels:
-    app: backend-service
+    app: backendservice1
 spec:
   ports:
     - protocol: TCP
-      port: 8000
-      targetPort: 8000
+      port: 5000
+      targetPort: 5000
   selector:
     app: backend-pod
