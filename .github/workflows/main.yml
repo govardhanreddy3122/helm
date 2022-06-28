@@ -1,4 +1,4 @@
-name: build and deploy to mygke1
+name: build and deploy to gke
 
 on: 
   push:
