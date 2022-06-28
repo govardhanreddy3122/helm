@@ -1,4 +1,4 @@
-name: build and deploy to gke
+name: build and deploy
 
 on: 
   push:
@@ -32,4 +32,4 @@ jobs:
 
       - name: helm my-app
         run: |
-          helm update my-app ./charts/mychart
+          helm upgrade my-app ./charts/mychart
